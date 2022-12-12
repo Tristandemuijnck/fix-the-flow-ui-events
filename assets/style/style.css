@@ -7,6 +7,8 @@
   --radius: 0.5rem;
   --pill: 2rem;
   --line: 0.1rem;
+
+  --iterations: 1;
 }
 * {
   box-sizing: border-box;
@@ -79,3 +81,116 @@ a:nth-of-type(12) {
 }
 
 /* Jouw animaties */
+
+/* Click rotate */
+.rotate{
+  animation-name: rotate;
+  animation-duration: 2.2s;
+  animation-iteration-count: var(--iterations);
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    color: red;
+    border-color: red;
+  }
+  100%{
+    transform: rotate(360deg);
+    color: var(--highlight-primary);
+  }
+}
+
+/* Click scale */
+.scale{
+  animation-name: scale;
+  animation-duration: 2.2s;
+  animation-iteration-count: var(--iterations);
+}
+
+@keyframes scale {
+  0%{
+   transform: scale(1);
+  }
+  50%{
+    transform: scale(1.5);
+    color: rebeccapurple;
+    border-color: rebeccapurple;
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+/* TranslateY */
+.translateY {
+  animation-name: translateY;
+  animation-duration: 1.2s;
+  animation-iteration-count: var(--iterations);
+  animation-timing-function: cubic-bezier(.48,.48,.72,.72)
+}
+
+@keyframes translateY {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(6rem);
+    color: orange;
+    border-color: orange;
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+/* TranslateX */
+.translateX {
+  animation-name: translateX;
+  animation-duration: 1.2s;
+  animation-iteration-count: var(--iterations);
+  animation-timing-function: cubic-bezier(.48,.48,.72,.72)
+}
+
+@keyframes translateX {
+  0%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(-16rem);
+    color: orange;
+    border-color: orange;
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+.keydown {
+  animation-name: keydown;
+  animation-duration: 1.2s;
+  animation-iteration-count: var(--iterations);
+  animation-timing-function: cubic-bezier(.48,.48,.72,.72)
+}
+
+@keyframes keydown {
+  0%{
+    transform: translateY(0);
+  }
+  25%{
+    transform: translateY(6rem);
+    color: green;
+    border-color: green;
+  }
+  50%{
+    transform: rotate(360deg);
+  }
+  75%{
+    transform: translateY(-6rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
