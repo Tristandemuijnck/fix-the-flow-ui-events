@@ -168,6 +168,7 @@ a:nth-of-type(12) {
   }
 }
 
+/* Keydown */
 .keydown {
   animation-name: keydown;
   animation-duration: 1.2s;
@@ -192,5 +193,94 @@ a:nth-of-type(12) {
   }
   100%{
     transform: translateY(0);
+  }
+}
+
+
+/* Keyup */
+.keyup {
+  animation-name: keyup;
+  animation-duration: 1.2s;
+  animation-iteration-count: var(--iterations);
+  animation-timing-function: cubic-bezier(.48,.48,.72,.72)
+}
+
+@keyframes keyup {
+  0%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(-24rem);
+    color: hotpink;
+    border-color: hotpink;
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+
+/* Longpress */
+.longpress {
+  animation-name: longpress;
+  animation-duration: 3.2s;
+  animation-iteration-count: var(--iterations);
+  animation-timing-function: cubic-bezier(.48,.48,.72,.72)
+}
+
+@keyframes longpress {
+  0%{
+    transform: translateY(0);
+  }
+  16%{
+    transform: translateY(8rem);
+    color: red;
+    border-color: red;
+  }
+  32%{
+    transform: translateY(16rem);
+    color: orange;
+    border-color: orange;
+  }
+  48%{
+    transform: translateY(24rem);
+    color: green;
+    border-color: green;
+  }
+  64%{
+    transform: translateY(16rem);
+    color: blue;
+    border-color: blue;
+  }
+  80%{
+    transform: translateY(8rem);
+    color: purple;
+    border-color: purple;
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+
+/* Device rotate */
+.deviceRotate {
+  animation-name: deviceRotate;
+  animation-duration: 1.2s;
+  animation-iteration-count: var(--iterations);
+  animation-timing-function: cubic-bezier(.48,.48,.72,.72)
+}
+
+@keyframes deviceRotate {
+  0%{
+    transform: rotate(0);
+  }
+  50%{
+    transform: rotate(90deg);
+    border-color: red;
+    color: red;
+  }
+  100%{
+    transform: rotate(0);
   }
 }
