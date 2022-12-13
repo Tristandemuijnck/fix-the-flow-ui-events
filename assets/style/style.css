@@ -263,6 +263,50 @@ a:nth-of-type(12) {
 }
 
 
+/* Double click */
+.dblClick {
+  animation-name: dblClick;
+  animation-duration: 1.2s;
+  animation-iteration-count: var(--iterations);
+  animation-timing-function: cubic-bezier(.48,.48,.72,.72)
+}
+
+@keyframes dblClick {
+  0%{
+    transform: rotate(0);
+  }
+  50%{
+    transform: rotate(180deg);
+    border-color: red;
+    color: red;
+  }
+  100%{
+    transform: rotate(0);
+  }
+}
+
+/* Focus */
+.focus {
+  animation-name: focus;
+  animation-duration: 1.2s;
+  animation-iteration-count: var(--iterations);
+  animation-timing-function: cubic-bezier(.48,.48,.72,.72)
+}
+
+@keyframes focus {
+  0%{
+    transform: scale(1) rotate(0);
+  }
+  50%{
+    transform: scale(1.5) rotate(180deg);
+    border-color: green;
+    color: green;
+  }
+  100%{
+    transform: scale(1) rotate(0);
+  }
+}
+
 /* Device rotate */
 .deviceRotate {
   animation-name: deviceRotate;
@@ -276,11 +320,12 @@ a:nth-of-type(12) {
     transform: rotate(0);
   }
   50%{
-    transform: rotate(90deg);
+    transform: translateY(16rem) rotate(-180deg);
     border-color: red;
     color: red;
   }
   100%{
-    transform: rotate(0);
+    transform: rotate(-360deg);
   }
 }
+

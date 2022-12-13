@@ -74,8 +74,24 @@ function longpressHandler() {
   longpress.classList.toggle('longpress')
 }
 
+// Double click
+let doubleClick = document.querySelector('a:nth-of-type(8)');
+doubleClick.addEventListener('dblclick', doubleClickHandler)
+doubleClick.addEventListener('animationend', doubleClickHandler)
+function doubleClickHandler() {
+  doubleClick.classList.toggle('dblClick')
+}
+
+// Focus
+let focus = document.querySelector('a:nth-of-type(9)');
+focus.addEventListener('focus', focusHandler)
+focus.addEventListener('animationend', focusHandler)
+function focusHandler() {
+  focus.classList.toggle('focus')
+}
+
 // Device rotate
-let deviceRotate = document.querySelector('a:nth-of-type(8)');
+let deviceRotate = document.querySelector('a:nth-of-type(10)');
 
 if (window.DeviceOrientationEvent) {
   window.addEventListener('deviceorientation', orientationHandler)
@@ -85,3 +101,4 @@ if (window.DeviceOrientationEvent) {
 function orientationHandler() {
   deviceRotate.classList.toggle('deviceRotate')
 }
+
