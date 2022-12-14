@@ -33,10 +33,13 @@ a {
   border-radius: var(--pill);
   font-weight: normal;
   text-decoration: none;
+  transition: .2s ease;
 }
 a:hover {
   color: var(--primary);
   border-color: var(--primary);
+  scale: 0.8;
+  transition: .2s ease;
 }
 
 /* UI Event Classes */
@@ -225,7 +228,9 @@ a:nth-of-type(12) {
   animation-name: longpress;
   animation-duration: 3.2s;
   animation-iteration-count: var(--iterations);
-  animation-timing-function: cubic-bezier(.48,.48,.72,.72)
+  animation-timing-function: cubic-bezier(.48,.48,.72,.72);
+  position: relative;
+  z-index: 15 ;
 }
 
 @keyframes longpress {
@@ -250,7 +255,7 @@ a:nth-of-type(12) {
   64%{
     transform: translateY(16rem);
     color: blue;
-    border-color: blue;
+    border-color: blue;    
   }
   80%{
     transform: translateY(8rem);
