@@ -42,6 +42,75 @@ a:hover {
   transition: .2s ease;
 }
 
+/* Extra info tab */
+.info-tab{
+  background-color: var(--highlight-primary);
+  max-width: 30rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.4rem 2rem;
+  border-radius: var(--radius);
+  /* opacity: 0; */
+  transition: .6s ease;
+}
+
+.info-tab:hover{
+  border-radius: var(--pill);
+  transition: .6s ease;
+  cursor: pointer;
+}
+
+.info-text{
+  color: var(--secondary);
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.info-text::before{
+  content: "- ";
+  color: var(--secondary);
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.hint{
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--highlight-primary);
+  border-radius: 50%;
+  padding: 1rem;
+  display: flex;
+  transition: .2s ease;
+}
+
+.hint:hover{
+  border-radius: 20%;
+  transition: .2s ease;
+  scale: 1.2;
+  cursor: pointer;
+}
+
+.hint:hover .hint-icon{
+  fill: var(--highlight-secondary);
+  transition: .2s ease;
+}
+
+.hint-icon{
+  height: auto;
+  aspect-ratio: 1/1;
+  width: 3rem;
+  fill: var(--secondary);
+  padding: 0;
+}
+
+.hidden{
+  transform: translateX(150%);
+}
+
 /* UI Event Classes */
 
 /* Jump animation on the interaction link */
