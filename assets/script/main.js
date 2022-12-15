@@ -131,11 +131,11 @@ function addDeviceOrientationListener() {
         deviceRotate.classList.toggle('deviceRotate')
         console.log(event);
     })
+    deviceRotate.addEventListener('animationend', function () {
+        deviceRotate.classList.toggle('deviceRotate')
+    })
 }
 
-deviceRotate.addEventListener('animationend', function () {
-    deviceRotate.classList.toggle('deviceRotate')
-})
 
 
 // Hint button
